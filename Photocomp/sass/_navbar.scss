@@ -1,0 +1,49 @@
+// Partial for the Nav Bar
+
+.navbar {
+  height: 64px;
+  width: auto;
+  margin: 0 auto;
+  padding-left: -24px;
+  padding-right: -24px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #666;
+}
+
+.navbar-item {
+  float: left;
+}
+
+.navbar-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar-item a:hover {
+  background-color: #111;
+  border-radius: 10px;
+}
+.navbar-item.current{
+  border-bottom: 2px solid red;
+}
+.navbar-item.animate {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+.navbar-item.animate img {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+ 

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Photocomp</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar main-content">
+        <ul class="navbar-list">
+            <li class="navbar-item"><a class="navbar-link" href="@Url.Action("Index", "Home")">Photo Competition</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="@Url.Action("TopImage", "TopRated")">Top image</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="@Url.Action("UploadPicture", "Upload")">Upload a picture</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="@Url.Action("About", "About")">About</a></li>
+            <li class="animate navbar-item" id="animate"><img src="img/Mario-run.gif" alt="Mario runing on the page"></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main role="main" class="main-content">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,153 @@
+// Import partials
+@import 'index';
+@import 'navbar';
+
+// set Shared props
+
+%padding-borders {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+//Variables
+$shadows: 5px 5px 2px black;
+$fonts: 'Roboto', Helvetica, sans-serif, Arial;
+
+// Global styling
+  
+body {
+  margin: 0;
+  background-image: url("/img/landscape-blur.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: $fonts;
+}
+
+head {
+  font-family: $fonts;
+}
+
+button {
+  border-radius: 10px;
+  font-size: 150%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  border-radius: 10px;
+  box-shadow: $shadows
+}
+input {
+  display: block;
+  margin-right: auto;
+  margin-left: 20%;
+}
+.main-content {
+  width: 100%;
+  max-width: 100%;
+}
+.main-image {
+  max-width: 56%;
+  max-height: 50%;
+  margin-left: auto;
+  margin-right: 5%;
+  display: block;
+  border-radius: 10px;
+  box-shadow: $shadows;
+  float: right;
+}
+.top-image {
+  max-width: 56%;
+  max-height: 50%;
+  margin-left: auto;
+  margin-right: 5%;
+  display: block;
+  border-radius: 10px;
+  box-shadow: $shadows;
+  float: right;
+}
+.image-details {
+  max-width: 30%;
+  @extend %padding-borders;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: $shadows;
+  float: left;
+  margin-left: 5%;
+  word-wrap: break-word;
+  font-size: 120%;
+}
+.form {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  @extend %padding-borders;
+  display: block;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: $shadows;
+  word-wrap: break-word;
+  font-size: 120%;
+}
+
+.voting-buttons {
+  float: left;
+  margin-left: 13%;
+  margin-top: 1%;
+}
+.about {
+  max-width: 60%;
+  @extend %padding-borders;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: $shadows;
+  word-wrap: break-word;
+  font-size: 170%;
+}
+.page-title {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  @extend %padding-borders;
+  display: block;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: $shadows;
+  font-size: 170%;
+}
+.upload-feedback{
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  @extend %padding-borders;
+  display: block;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: $shadows;
+  font-size: 170%;
+}
+.submit-upload-request{
+    border-radius: 10px;
+    font-size: 150%;
+    transition-duration: 0.4s;
+    @extend %padding-borders;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+.submit-upload-request:hover {
+border-radius: 10px;
+box-shadow: $shadows
+}
