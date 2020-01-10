@@ -10,7 +10,26 @@ namespace Photocomp.Controllers
     {
         public IActionResult TopImage()
         {
+            DisplayDataFromAPI();
             return View();
+        }
+        private void DisplayDataFromAPI()
+        {
+            PictureAndMetaData PAMD = CallTopRatedIMage();
+
+            ViewBag.PictureURL = PAMD.url;
+            ViewBag.Author = PAMD.author;
+            ViewBag.NameOfPic = PAMD.name;
+            ViewBag.License = PAMD.license;
+            ViewBag.ID = PAMD.id;
+        }
+
+        private static PictureAndMetaData CallTopRatedIMage()
+        {
+            var api = new API();
+            PictureAndMetaData PAMD = new PictureAndMetaData();
+            PAMD = api.SelectRightCommand(4);
+            return PAMD;
         }
     }
 }

@@ -20,12 +20,45 @@ namespace Photocomp.Controllers
 
         public IActionResult Index()
         {
+            DisplayDataFromAPI();
+
             return View();
         }
-
-        public IActionResult Privacy()
+        [HttpPost]
+        public ActionResult SendVoteUp(int ID)
         {
-            return View();
+            var api = new API();
+            api.SelectRightCommand(5, ID);
+            DisplayDataFromAPI();
+
+            return View("Index");
+        }
+        [HttpPost]
+        public ActionResult SendVoteDown(int ID)
+        {
+            var api = new API();
+            api.SelectRightCommand(6, ID);
+            DisplayDataFromAPI();
+
+            return View("Index");
+        }
+        private void DisplayDataFromAPI()
+        {
+            PictureAndMetaData PAMD = CallRandomImage();
+
+            ViewBag.PictureURL = PAMD.url;
+            ViewBag.Author = PAMD.author;
+            ViewBag.NameOfPic = PAMD.name;
+            ViewBag.License = PAMD.license;
+            ViewBag.ID = PAMD.id;
+        }
+
+        private static PictureAndMetaData CallRandomImage()
+        {
+            var api = new API();
+            PictureAndMetaData PAMD = new PictureAndMetaData();
+            PAMD = api.SelectRightCommand(3);
+            return PAMD;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

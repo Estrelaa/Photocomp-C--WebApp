@@ -7,9 +7,10 @@ namespace Photocomp.API.Handler
 {
     class ParseResponse
     {
-        public void ParseJson()
+        public PictureAndMetaData ParseJson(string ContentOfJson)
         {
-
+            var meta = JsonConvert.DeserializeObject<PictureAndMetaData>(ContentOfJson);
+            return meta;
         }
     }
 }

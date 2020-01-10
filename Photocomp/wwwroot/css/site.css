@@ -54,7 +54,7 @@
   width: 42px;
   height: 42px; }
 
-.image-details, .form, .about, .page-title, .upload-feedback, .submit-upload-request {
+.Submit, .image-details, .form, .about, .page-title, .upload-feedback, .submit-upload-request {
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 16px;
@@ -76,6 +76,24 @@ button {
   font-size: 150%;
   transition-duration: 0.4s;
   cursor: pointer; }
+
+.Submit {
+  border-radius: 10px;
+  font-size: 150%;
+  transition-duration: 0.4s;
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: white;
+  float: left;
+  margin-left: 5%;
+  word-wrap: break-word;
+  cursor: pointer; }
+
+.Submit:hover {
+  border-radius: 10px;
+  box-shadow: 5px 5px 2px black; }
 
 button:hover {
   border-radius: 10px;
